@@ -1,7 +1,9 @@
 
-name: CI
+name: godocit
 
 on: 
+  issues:
+    types: [labeled]
   pull_request:
     types: [labeled]
 
@@ -12,4 +14,4 @@ jobs:
     - name: Create documentation issues
       uses: gobeer/godocit@v5
       env:
-        INSTALLATION_ID: ${{ secrets.InstallationID }}
+        INSTALLATION_ID: "5874133"
