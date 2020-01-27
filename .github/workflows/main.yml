@@ -1,0 +1,15 @@
+
+name: CI
+
+on: 
+  pull_request:
+    types: [labeled]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create documentation issues
+      uses: gobeer/godocit@v5
+      env:
+        INSTALLATION_ID: ${{ secrets.InstallationID }}
