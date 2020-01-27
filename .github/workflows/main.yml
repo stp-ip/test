@@ -11,5 +11,5 @@ jobs:
     steps:
     - name: Create documentation issues
       uses: gobeer/godocit@v5
-      env:
-        INSTALLATION_ID: "5874133"
+      with:
+        installationID: "5874133"
